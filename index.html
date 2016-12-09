@@ -1,15 +1,180 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.5.5/css/tachyons.min.css"/>
+    <style>
+      ---
+# Overwrite Tachyons here. Don't go overboard!
+---
 
-  {% include head.html %}
+.cf {
+  clear: both;
+}
 
-  <body class="bg-white black arial">
-    <div id="banner"></div>
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+.cf-4th {
+  &:nth-child(4n) {
+    margin-right: 0;
+    clear: both;
+  }
+}
+
+.arial { font-family: 'Arial';}
+
+.vh-16 {  height:  16.6666666667vh; }
+
+.neg {
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
+	-moz-animation-name: blinker;
+	-moz-animation-duration: 3s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+
+	animation-name: blinker;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.low {
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
+	-moz-animation-name: blinker;
+	-moz-animation-duration: 1s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+
+	animation-name: blinker;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.med {
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
+	-moz-animation-name: blinker;
+	-moz-animation-duration: .5s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+
+	animation-name: blinker;
+	animation-duration: .5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.hi {
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: .25s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
+	-moz-animation-name: blinker;
+	-moz-animation-duration: .25s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+
+	animation-name: blinker;
+	animation-duration: .25s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.sev {
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: .125s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
+	-moz-animation-name: blinker;
+	-moz-animation-duration: .125s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+
+	animation-name: blinker;
+	animation-duration: .125s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.crit {
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
+	-moz-animation-name: blinker;
+	-moz-animation-duration: 1s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+
+	animation-name: blinker;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.crit-bg {
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: .0125s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
+	-moz-animation-name: blinker;
+	-moz-animation-duration: .0125s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+
+	animation-name: blinker;
+	animation-duration: .0125s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {
+	0% { opacity: 1.0; }
+	50% { opacity: 0.0; }
+	100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {
+	0% { opacity: 1.0; }
+	50% { opacity: 0.0; }
+	100% { opacity: 1.0; }
+}
+
+@keyframes blinker {
+	0% { opacity: 1.0; }
+	50% { opacity: 0.0; }
+	100% { opacity: 1.0; }
+}
+
+    </style>
+    <title>Creativity Levels</title>
+  </head>
+  <body>
+    <div class="dt dt--fixed w-100 tc bg-black">
+       <div class="dtc vh-25 v-mid white f4">CREATIVE TEAM ENERGY LEVELS</div>
+    </div>
+    <div class="dt dt--fixed w-100 tc f4">
+      <div class="dtc vh-75 v-mid bg-green"><span class="neg">NEGLIGIBLE</span></div>
+      <div class="dtc vh-75 v-mid bg-blue"><span class="low">LOW</span></div>
+      <div class="dtc vh-75 v-mid bg-yellow"><span class="med">MEDIUM</span></div>
+      <div class="dtc vh-75 v-mid bg-orange"><span class="hi">HIGH</span></div>
+      <div class="dtc vh-75 v-mid bg-red"><span class="sev">SEVERE</span></div>
+      <div class="dtc vh-75 v-mid bg-black crit-bg"><span class="crit white">CRITICAL</span></div>
+
     </div>
   </body>
-
 </html>
